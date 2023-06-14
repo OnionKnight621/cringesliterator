@@ -2,7 +2,8 @@
   "name": "cringesliterator",
   "version": "0.1.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "lib/index.js",
+  "type": "commonjs",
   "scripts": {
     "build": "tsc"
   },
