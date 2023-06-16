@@ -6,7 +6,7 @@ export const LAT = "a b c d e f g h i j k l m n o p q r s t u v w x y z".split(/
 
 export const LAT_CRI = "升 乃 匚 力 仨 下 马 卄 工 亅 长 乚 从 认 口 尸 贝 尺 丂 丅 凵 V 山 乂 丫 乙".split(/ +/g);
 
-export const LANGUAGES = { 
-    LAT: "LAT", 
-    CYR: "CYR" 
+export enum LANGUAGES { 
+    LAT = "LAT", 
+    CYR = "CYR" 
 };

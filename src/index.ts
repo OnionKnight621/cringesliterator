@@ -1,6 +1,6 @@
 import { LAT, LAT_CRI, CYR, CYR_CRI, LANGUAGES } from "./constants";
 
-function transliterate(text: string, lang: string = LANGUAGES.LAT): string {
+function transliterate(text: string, lang = LANGUAGES.LAT): string {
   let fromLang = LAT;
   let toLang = LAT_CRI;
   let result = text;

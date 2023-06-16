@@ -1,6 +1,6 @@
 {
   "name": "cringesliterator",
-  "version": "0.1.0-a",
+  "version": "0.2.0",
   "description": "",
   "main": "lib/index.js",
   "type": "commonjs",
