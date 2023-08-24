@@ -1,14 +1,15 @@
-import { LAT, LAT_CRI, CYR, CYR_CRI, LANGUAGES } from "./constants";
+import constants, { LANGUAGES, CRI_ENDING } from "./constants";
 
-function transliterate(text: string, lang = LANGUAGES.LAT): string {
-  let fromLang = LAT;
-  let toLang = LAT_CRI;
+function getOppositeTag(inputTag: LANGUAGES, endingTag: string) {
+  const hasEnding = inputTag.includes(endingTag);
+
+  return hasEnding ? inputTag.replace(endingTag, '') : `${inputTag}${endingTag}`;
+}
+
+function transliterate(text: string, languageFrom = LANGUAGES.LAT): string {
+  let fromLang = constants[languageFrom];
+  let toLang = constants[getOppositeTag(languageFrom, CRI_ENDING) as LANGUAGES];
   let result = text;
-
-  if (lang.toUpperCase() === LANGUAGES.CYR) {
-    fromLang = CYR;
-    toLang = CYR_CRI;
-  }
 
   for (let x = 0; x < fromLang.length; x++) {
     result = result.replace(/\s+/g, "  ");
@@ -17,6 +18,7 @@ function transliterate(text: string, lang = LANGUAGES.LAT): string {
       .split(fromLang[x].toUpperCase())
       .join(toLang[x].toUpperCase());
   }
+
   return result;
 }
 
