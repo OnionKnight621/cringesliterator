@@ -22,4 +22,7 @@ function transliterate(text: string, languageFrom = LANGUAGES.LAT): string {
   return result;
 }
 
-export = transliterate;
+export = {
+  transliterate,
+  constants
+};
