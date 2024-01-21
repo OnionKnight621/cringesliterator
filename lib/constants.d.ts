@@ -12,4 +12,5 @@ declare const constants: {
     LAT_CRI: string[];
     LANGUAGES: typeof LANGUAGES;
 };
+export declare const REPLACE_REGEXP: RegExp;
 export default constants;

@@ -1,13 +1,4 @@
-import { LANGUAGES } from "./constants";
-declare function transliterate(text: string, languageFrom?: LANGUAGES): string;
-declare const _default: {
-    transliterate: typeof transliterate;
-    constants: {
-        CYR: string[];
-        CYR_CRI: string[];
-        LAT: string[];
-        LAT_CRI: string[];
-        LANGUAGES: typeof LANGUAGES;
-    };
-};
-export = _default;
+import constants, { CRI_ENDING, LANGUAGES, REPLACE_REGEXP } from "./constants";
+import transliterate from "./transliterator";
+import * as utils from "./utils";
+export { constants, transliterate, utils, CRI_ENDING, LANGUAGES, REPLACE_REGEXP, };
